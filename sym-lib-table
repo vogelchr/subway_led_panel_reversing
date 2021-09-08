@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "subway_led_panel_reversing")(type "KiCad")(uri "${KIPRJMOD}/subway_led_panel_reversing.kicad_sym")(options "")(descr ""))
+)
