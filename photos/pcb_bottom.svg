@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.0923508"
-     inkscape:cx="543.16895"
-     inkscape:cy="409.10921"
+     inkscape:zoom="2.9590309"
+     inkscape:cx="267.6552"
+     inkscape:cy="559.30474"
      inkscape:window-width="3440"
      inkscape:window-height="1375"
      inkscape:window-x="0"
@@ -143,7 +143,7 @@
          id="tspan36130-6-9">IC3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;stroke-width:0.264583;fill:#ff0000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#ff0000;stroke-width:0.264583"
        x="246.53316"
        y="171.43797"
        id="text19345-3-0-6-6-2"
@@ -183,18 +183,37 @@
        inkscape:flatsided="true"
        sodipodi:sides="3"
        sodipodi:cx="161.60533"
-       sodipodi:cy="644.81826"
+       sodipodi:cy="644.81824"
        sodipodi:r1="7.8334312"
        sodipodi:r2="3.9167156"
        sodipodi:arg1="0"
        sodipodi:arg2="1.0471976"
        inkscape:rounded="0"
        inkscape:randomized="0"
-       d="m 169.43876,644.81826 -11.75015,6.78395 v -13.5679 z"
+       d="m 169.43876,644.81824 -11.75014,6.78395 v -13.5679 z"
        transform="matrix(-0.26458333,0,0,-0.26458333,85.915063,344.40929)"
        inkscape:transform-center-x="0.45703121"
        inkscape:transform-center-y="4.1345702e-06"
        inkscape:label="J1_pin1" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round"
+       id="path34775-47"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="161.60533"
+       sodipodi:cy="644.81824"
+       sodipodi:r1="7.8334312"
+       sodipodi:r2="3.9167156"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(0.26458333,0,0,0.26458333,5.6430265,-1.5813632)"
+       inkscape:transform-center-x="-0.45703622"
+       inkscape:transform-center-y="-1.9232495e-06"
+       inkscape:label="IC2_pin1"
+       d="m 169.43876,644.81824 -11.75014,6.78395 v -13.5679 z" />
     <path
        sodipodi:type="star"
        style="opacity:1;fill:#ff0000;fill-opacity:1;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round"
@@ -214,5 +233,27 @@
        inkscape:transform-center-y="4.1345702e-06"
        d="m 169.43876,644.81824 -11.75014,6.78395 v -13.5679 z"
        inkscape:label="J2_pin1" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#ff0000;stroke-width:0.264583"
+       x="118.5495"
+       y="166.74857"
+       id="text2158"><tspan
+         sodipodi:role="line"
+         id="tspan2156"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="118.5495"
+         y="166.74857">GND</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#ff0000;stroke-width:0.264583"
+       x="117.36124"
+       y="171.01762"
+       id="text2158-6"><tspan
+         sodipodi:role="line"
+         id="tspan2156-2"
+         style="fill:#ff0000;stroke-width:0.264583"
+         x="117.36124"
+         y="171.01762">V+</tspan></text>
   </g>
 </svg>
