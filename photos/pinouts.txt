@@ -1,8 +1,8 @@
 J1 Digital Signal Input
 
        +-------+
-       > 1   2 | DI/IC1
-DI/IC4 | 3   4 | DI/IC?
+DI?    > 1   2 | DI/IC1
+DI/IC4 | 3   4 | ?
 ~E1    | 5   6 | A2
 A1     | 7   8 | A0
 E2     : 9  10 | OE
@@ -12,6 +12,23 @@ GND    | 13 14 | CLK
 J1-17  | 17 18 | J1-18
 J1-19  | 19 20 | 
        +-------+
+
+
+** Serial data inputs, |> are gates in 74HC14D, IC9
+
+J1/#1 ---[R]---1-|>-2----3-|>-4--- (?) suspect DI of MBI5029
+J1/#2 ---[R]---13|>12----11|>10--- DI/IC1
+J1/#3 ---[R]---5-|>-6----9-|>-8--- DI/IC4
+
+** MBI5029 control, |> are gates in 75HC14D, IC2
+
+J1/#10---[R]---1-|>-2------------- OE MBI5029
+J1/#12---[R]---3-|>-4----5-|>-6--- LE MBI5029
+J1/#14---[R]---13|>12----11|>10--- CLK MBI5029
+
+** Row decoder 74HC238, IC7
+
+J1/#5, #6, #7, #8, #9 go to 75HC238 via series resistor + pulldown(?)
 
 
 J2 Digital Signal Output
