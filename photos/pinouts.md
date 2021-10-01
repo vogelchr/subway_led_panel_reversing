@@ -2,18 +2,62 @@
 
 ## J1 Digital Signal Input
 
-    (sketch)           +-------+
-    (sketch)    DI?    > 1   2 | DI/IC1
-    (sketch)    DI/IC4 | 3   4 | ?
-    (sketch)    ~E1    | 5   6 | A2
-    (sketch)    A1     | 7   8 | A0
-    (sketch)    E2     : 9  10 | OE
-    (sketch)    GND    : 11 12 | LE/MOD/CA
-    (sketch)    GND    | 13 14 | CLK
-    (sketch)           | 15 16 |
-    (sketch)    J1-17  | 17 18 | J1-18
-    (sketch)    J1-19  | 19 20 |
-    (sketch)           +-------+
+    (sketch)             +-------+
+    (sketch)    DIa(???) > 1   2 | DIb (IC1)
+    (sketch)    DIc(IC4) | 3   4 | ?
+    (sketch)    ~E1      | 5   6 | A2
+    (sketch)    A1       | 7   8 | A0
+    (sketch)    E2       : 9  10 | OE
+    (sketch)    GND      : 11 12 | LE/MOD/CA
+    (sketch)    GND      | 13 14 | CLK
+    (sketch)             | 15 16 |
+    (sketch)    DOA0     | 17 18 | DOA1
+    (sketch)    DOX      | 19 20 |
+    (sketch)             +-------+
+
+## J2 Digital Signal Output
+
+    (sketch)             +-------+
+    (sketch)    DOa      > 1   2 | DOb
+    (sketch)    DOc      | 3   4 |
+    (sketch)    ~E1/J1   | 5   6 | J1-6 A2
+    (sketch)    A1/J1    | 7   8 | J1-8 A0
+    (sketch)    E2/J1    : 9  10 | J1-10 OE
+    (sketch)    GND      : 11 12 | J1-12 LE/MOD/CA
+    (sketch)    GND      | 13 14 | J1-14 CLK
+    (sketch)        ?    | 15 16 | ?
+    (sketch)    DOA0     | 17 18 | DOA1
+    (sketch)    DOX      | 19 20 | 
+    (sketch)             +-------+
+
+## J4 System Controller
+
+The J4 connector is a copy of J1, with 10 GND and 10 VCC pads added.
+
+    (sketch)             +--------+
+    (sketch)             >  1   2 | }
+    (sketch)             |  3   4 | } all GND
+    (sketch)             |  5   6 | }
+    (sketch)             |  7   8 | }
+    (sketch)             |  9  10 | }
+    (sketch)        DOa  | 11  12 | DIb
+    (sketch)        DOc  | 13  14 | -
+    (sketch)        E1   | 15  16 | A2
+    (sketch)        A1   | 17  18 | A0
+    (sketch)        E2   : 19  20 | OE
+    (sketch)        GND  : 21  22 | LE
+    (sketch)        GND  | 23  24 | CLK
+    (sketch)             | 25  26 | ?
+    (sketch)        DOA0 | 27  28 | DOA1
+    (sketch)        DOx  | 29  30 |
+    (sketch)             | 31  32 | }
+    (sketch)             | 33  34 | }
+    (sketch)             | 35  36 | }
+    (sketch)             | 37  38 | }
+    (sketch)             | 39  40 | }
+    (sketch)             +--------+
+
+J1 pinout
 
 | Pin | Chip Function | Inverted? | Sign function
 | --- | ----------- | --------- | -----------
@@ -55,7 +99,20 @@ A detailed description of the connections from connectors to individual ICs foll
     (sketch)    J1/#12---[R]---3-|>-4----5-|>-6--- LE MBI5029
     (sketch)    J1/#14---[R]---13|>12----11|>10--- CLK MBI5029
 
-#** Row decoder 74HC238, IC7
+## Selectable data output
+
+Pins J1/#17 and J1/#19 select which chain's SDO signal is output on J1/#19, there is also
+a jumper link adjacent to J2 which needs to be installed. The 4 gates in IC6 have their
+outputs paralleled, only one is shown.
+
+    (sketch)                   +-IC5---+     +-IC6---+
+    (sketch)    J1/#17(DOA0) --|A0  Y0 |-----| OE  Y0|-+--o --jumper-- o--- J1/#19(DOx)
+    (sketch)    J1/#18(DOA1) --|A1  ...|  +--| A0    | |
+    (sketch)                   +-------+  |  +-------+ |
+    (sketch)                              |            |
+    (sketch)                             SDOa      (Y1, Y2, Y3)
+
+## Row decoder 74HC238, IC7
 
 J1/#5, #6, #7, #8, #9 go to 75HC238 via series resistor + pulldown(?)
 
@@ -97,17 +154,5 @@ HC-family Vih is min 3.15V, typ 2.4V with 4.5V supply.
 HC input capacitance is a few pF, with ~1kOhm driving impedance, we would
 be "limited" to 15MHz. MBI5029 max. is 25 MHz...
 
-## J2 Digital Signal Output
 
-    (sketch)          +-------+
-    (sketch)          > 1   2 |
-    (sketch)          | 3   4 |
-    (sketch)          | 5   6 |
-    (sketch)          | 7   8 |
-    (sketch)          : 9  10 |
-    (sketch)    GND   : 11 12 |
-    (sketch)    GND   | 13 14 |
-    (sketch)          | 15 16 |
-    (sketch)    J1-17 | 17 18 | J1-18
-    (sketch)    J1-19 | 19 20 |
-    (sketch)          +-------+
+
