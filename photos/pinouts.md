@@ -57,30 +57,30 @@ The J4 connector is a copy of J1, with 10 GND and 10 VCC pads added.
     (sketch)             | 39  40 | }
     (sketch)             +--------+
 
-J1 pinout
+## J1/J2 detailed pinout
 
 | Pin | Chip Function | Inverted? | Sign function
-| --- | ----------- | --------- | -----------
-|  1  | MBI5029 DI  | No        | Column bit input
-|  2  | MBI5029 DI  | No        | Column bit input
-|  3  | MBI5029 DI  | No        | Column bit input
-|  4  |  -      |
-|  5  | HC238 ~E1   | No        | Row driver inverted enable
-|  6  | HC238 A2    | No        | Row select, Bit 2
-|  7  | HC238 A1    | No        | Row select, Bit 1
-|  8  | HC238 A0    | No        | Row select, Bit 0
-|  9  | HC129 E2    | No        | Row driver enable
-| 10  | MBI5029 OE  | Yes       | Column driver output enable
-| 11  | GND         | | |
-| 12  | MBI5029 LE  | No        | Column register latch
-| 13  | GND         | | |
-| 14  | MBI5029 CLK  | no       | Column bit clock
-| 15  |  -      | | |
-| 16  |  -      | | |
-| 17  | passthrough | | |
-| 18  | passthrough | | |
-| 19  | passthrough | | |
-| 20  |  -      | | |
+| --- | ------------- | --------- | -----------
+|  1  | MBI5029 DI/DO | No        | J1: column bit input, J2: output
+|  2  | MBI5029 DI/DO | No        | J1: column bit input, J2: output
+|  3  | MBI5029 DI/DO | No        | J1: column bit input, J2: output
+|  4  |  -            |           |
+|  5  | HC238 ~E1     | No        | Row driver inverted enable
+|  6  | HC238 A2      | No        | Row select, Bit 2
+|  7  | HC238 A1      | No        | Row select, Bit 1
+|  8  | HC238 A0      | No        | Row select, Bit 0
+|  9  | HC129 E2      | No        | Row driver enable
+| 10  | MBI5029 OE    | Yes       | Column driver output enable
+| 11  | GND           |           |
+| 12  | MBI5029 LE    | No        | Column register latch
+| 13  | GND           |           |
+| 14  | MBI5029 CLK   | no        | Column bit clock
+| 15  |  -            |           |
+| 16  |  -            |           |
+| 17  | HC238 A0      | no        | column group select for DI/Pin 19
+| 18  | HC238 A1      | no        | column group select for DO/Pin 19
+| 19  | HC128 Yn      | no        | selected column read back (needs jumper)
+| 20  |  -            |           |
 
 A detailed description of the connections from connectors to individual ICs follows.
 
@@ -153,6 +153,5 @@ HC-family Vih is min 3.15V, typ 2.4V with 4.5V supply.
 
 HC input capacitance is a few pF, with ~1kOhm driving impedance, we would
 be "limited" to 15MHz. MBI5029 max. is 25 MHz...
-
 
 
